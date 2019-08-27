@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import { Message } from 'element-ui'
+// import { Message } from 'element-ui'
 export default {
   data () {
     return {
@@ -76,16 +76,10 @@ export default {
           this.loading = true
           this.$axios.login.getUesr(this.uesr).then(result => {
             this.loading = false
-            if (!result.success) {
-              Message({
-                message: result.mag,
-                type: 'error'
-              })
-            }
-
             let { token } = result
             // 吧token存起来
             localStorage.setItem('eleToken', token)
+            this.$router.push('/dashboard')
           }).catch(err => {
             console.log(err)
             this.loading = false

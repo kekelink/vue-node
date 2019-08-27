@@ -8,4 +8,10 @@ const conn = mysql.createConnection({
 conn.connect(err => {
   if (err) return console.log(err.message)
 })
+// conn.end(function (err) {
+//   if (err) {
+//     return console.log('error:' + err.message);
+//   }
+//   console.log('Close the database connection.');
+// });
 module.exports =conn

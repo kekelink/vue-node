@@ -9,7 +9,8 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import store from './store'
 import '@/permission'
-
+import '@/icons' // icon
+import '@/styles/index.scss'
 Vue.use(ElementUI)
 
 Vue.prototype.$axios = axios

@@ -3,7 +3,7 @@ import router from './router'
 // import { Message } from 'element-ui'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
-// import getPageTitle from '@/utils/get-page-title'
+import getPageTitle from '@/utils/get-page-title'
 const whiteList = ['/login']
 NProgress.configure({ showSpinner: false }) // 页面顶部加载条
 
@@ -11,7 +11,7 @@ router.beforeEach(async (to, from, next) => {
   NProgress.start()
 
   // set page title
-  // document.title = getPageTitle(to.meta.title)
+  document.title = getPageTitle(to.meta.title)
   const Token = localStorage.eleToken
 
   // determine whether the user has logged in

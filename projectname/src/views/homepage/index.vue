@@ -3,7 +3,7 @@
 </template>
 <script>
 export default {
-  name: 'index',
+  name: 'homepage',
   data () {
     return {
 
