@@ -15,6 +15,11 @@ app.use(bodyParser.json())
 // passport 初始化
 app.use(passport.initialize())
 require('./config/passport')(passport) //验证
+app.use(express.static('dist'))
+app.get('*',(req,res)=>{
+  res.sendFile(path.relative(__dirname,'dist','index.html'))
+})
+
 // 跨域初始化
 app.use(function(req, res, next) {
   // 我这里知识把登陆和注册请求去掉了，其他的多有请求都需要进行token校验
@@ -29,8 +34,9 @@ app.use(function(req, res, next) {
         return
       } else {
         //验证成功放行
-        // console.log(decoded)
+        console.log(decoded)
         next()
+        
       }
     })
   } else {
@@ -55,6 +61,7 @@ app.all('*', function(req, res, next) {
   next()
 })
 
-app.listen('8081', () => {
+
+app.listen('8081',() => {
   console.log('http://192.168.0.135:8081')
 })

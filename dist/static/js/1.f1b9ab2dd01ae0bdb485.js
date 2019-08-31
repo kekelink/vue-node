@@ -1,0 +1,2 @@
+webpackJsonp([1],{ARoL:function(e,t,a){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=a("4YfN"),r=a.n(n),s=a("2bvH"),c={name:"Dashboard",computed:r()({},Object(s.b)(["name"]))},i={render:function(){var e=this.$createElement,t=this._self._c||e;return t("div",{staticClass:"dashboard-container"},[t("el-card",{staticClass:"box-card"},[this._v("\n    功能处于开发阶段\n    ")])],1)},staticRenderFns:[]};var o=a("C7Lr")(c,i,!1,function(e){a("uzqF")},"data-v-802521aa",null);t.default=o.exports},uzqF:function(e,t){}});
+//# sourceMappingURL=1.f1b9ab2dd01ae0bdb485.js.map
